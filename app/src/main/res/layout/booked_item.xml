@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    >
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_boarder"
+        >
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/itemImg"
+            android:src="@drawable/loadingimage"
+            android:adjustViewBounds="true"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details..(Loading...)"
+            android:id="@+id/item_details"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical"
+            android:layout_alignTop="@+id/itemImg"
+            android:layout_toRightOf="@+id/itemImg"
+            android:layout_toLeftOf="@+id/cancel_booking"
+            android:maxLines="1"
+            style="@style/ShadowText"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ProviderName"
+            android:id="@+id/providerName"
+            android:layout_below="@+id/item_details"
+            android:layout_toRightOf="@+id/itemImg"
+            android:layout_alignRight="@+id/item_details"
+            android:layout_alignEnd="@+id/item_details"
+            android:textColor="#09016f"
+            android:maxLines="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Timings"
+            android:id="@+id/bookingTime"
+            android:layout_below="@+id/providerName"
+            android:layout_centerHorizontal="true"
+            android:textColor="#390240" />
+        <Button
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="@string/cancel"
+            android:id="@+id/cancel_booking"
+            android:background="@drawable/cancel"
+            android:paddingRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            android:shadowColor="#ffffff"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:textAlignment="center" />
+
+
+    </RelativeLayout>
+</LinearLayout>

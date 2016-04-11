@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.tech.thrithvam.beautyapp.Booking"
+    android:background="@drawable/bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UserDetailsForBooking"
+        android:background="#ffffff">
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you_are_logged_in_as"
+
+        android:textColor="#000000"
+        android:id="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/user_name"
+            android:id="@+id/user_name_view"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/mob_no"
+            android:id="@+id/mob_no_view"
+            android:textColor="#000000"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/user_name_view"
+            android:layout_alignLeft="@+id/user_name_view"
+            android:layout_alignStart="@+id/user_name_view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/email"
+            android:id="@+id/email_view"
+            android:textColor="#3d1616"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/mob_no_view"
+            android:layout_alignLeft="@+id/mob_no_view"
+            android:layout_alignStart="@+id/mob_no_view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+
+    <ScrollView android:id="@+id/ScrlView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:layout_below="@id/UserDetailsForBooking"
+       >
+    <LinearLayout android:id="@+id/layoutForScroll"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_date"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+        <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_time"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timePicker"
+        android:layout_gravity="center"
+         />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book"
+            android:id="@+id/book_button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="book_button"/>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
