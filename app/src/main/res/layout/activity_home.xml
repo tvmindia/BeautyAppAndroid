@@ -10,6 +10,7 @@
     android:isScrollContainer="true"
     android:background="@drawable/bg"
     >
+
     <ScrollView android:id="@+id/ScrlView" android:layout_width="fill_parent" android:layout_height="fill_parent"
         android:layout_above="@+id/go">
     <LinearLayout android:id="@+id/layoutForScroll" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
